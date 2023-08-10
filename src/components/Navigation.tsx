@@ -10,8 +10,9 @@ interface NavigationProps {
 
 const routes = [
 	{ id: 0, path: "/", title: "Home" },
-	{ id: 1, path: "/projects", title: "Projects" },
-	{ id: 2, path: "/contacts", title: "Contacts" },
+	{ id: 1, path: "/about", title: "About" },
+	{ id: 2, path: "/projects", title: "Projects" },
+	{ id: 3, path: "/contacts", title: "Contacts" },
 ];
 
 const Navigation: React.FC<NavigationProps> = ({ toggleDarkMode }) => {
