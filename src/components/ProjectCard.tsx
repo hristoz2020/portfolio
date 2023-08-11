@@ -13,7 +13,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 			<CardMedia
 				sx={{ height: 200 }}
 				image={project.image}
-				title="green iguana"
+				title={project.name}
 			/>
 			<CardContent>
 				<Typography gutterBottom variant="h5" component="div">
@@ -32,14 +32,16 @@ const ProjectCard = ({ project }: { project: Project }) => {
 				>
 					GitHub
 				</Button>
-				<Button
-					size="small"
-					component={Link}
-					color="inherit"
-					to={project.demo}
-				>
-					Demo
-				</Button>
+				{project.demo.length > 0 && (
+					<Button
+						size="small"
+						component={Link}
+						color="inherit"
+						to={project.demo}
+					>
+						Demo
+					</Button>
+				)}
 			</CardActions>
 		</Card>
 	);
