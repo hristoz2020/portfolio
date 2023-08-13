@@ -6,6 +6,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Project } from "../constants/projectsList";
 import { Link } from "react-router-dom";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import VisibilityIcon from "@mui/icons-material/Visibility";
 
 const ProjectCard = ({ project }: { project: Project }) => {
 	return (
@@ -31,6 +33,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
 					to={project.code}
 				>
 					GitHub
+					<GitHubIcon
+						sx={{ paddingLeft: "4px", paddingBottom: "4px" }}
+					/>
 				</Button>
 				{project.demo.length > 0 && (
 					<Button
@@ -40,6 +45,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
 						to={project.demo}
 					>
 						Demo
+						<VisibilityIcon
+							sx={{ paddingLeft: "4px", paddingBottom: "4px" }}
+						/>
 					</Button>
 				)}
 			</CardActions>

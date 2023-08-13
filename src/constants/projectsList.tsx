@@ -15,7 +15,7 @@ export type Project = {
 	demo: string;
 };
 
-export const projetcsList: Project[] = [
+export const projectsList: Project[] = [
 	{
 		id: 0,
 		name: "Who wants to be a Millionaire",
