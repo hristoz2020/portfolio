@@ -58,21 +58,15 @@ const Navigation: React.FC<NavigationProps> = ({ toggleDarkMode }) => {
 					<>
 						{routes.map((linkItem) => (
 							<Button key={linkItem.id} color="inherit">
-								<Link to={linkItem.path} smooth={true} duration={500}>
+								<Link
+									to={linkItem.path}
+									smooth={true}
+									duration={500}
+								>
 									{linkItem.title}
 								</Link>
 							</Button>
 						))}
-						{/* {routes.map((linkItem) => (
-							<Button
-								component={Link}
-								to={linkItem.path}
-								color="inherit"
-								key={linkItem.id} 
-							>
-								{linkItem.title}
-							</Button>
-						))} */}
 					</>
 				)}
 				<MaterialUISwitch defaultChecked onClick={toggleDarkMode} />
@@ -80,14 +74,15 @@ const Navigation: React.FC<NavigationProps> = ({ toggleDarkMode }) => {
 			<Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer}>
 				<List>
 					{routes.map((linkItem) => (
-						<ListItem
-							button
-							component={Link}
-							to={linkItem.path}
-							onClick={toggleDrawer}
-							key={linkItem.id}
-						>
-							<ListItemText primary={linkItem.title} />
+						<ListItem key={linkItem.id}>
+							<Link
+								to={linkItem.path}
+								onClick={toggleDrawer}
+								smooth={true}
+								duration={500}
+							>
+								<ListItemText primary={linkItem.title} />
+							</Link>
 						</ListItem>
 					))}
 				</List>
