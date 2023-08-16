@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Contacts from "./pages/Contacts";
 import About from "./pages/About";
+import Footer from "./components/Footer";
 
 function App() {
 	const [darkMode, setDarkMode] = useState(false);
@@ -28,6 +29,7 @@ function App() {
 			<About />
 			<Projects />
 			<Contacts />
+			<Footer />
 		</ThemeProvider>
 	);
 }
