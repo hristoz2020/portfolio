@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import {
 	AppBar,
 	Toolbar,
@@ -13,6 +12,7 @@ import {
 	useMediaQuery,
 	useTheme,
 } from "@mui/material";
+import { Link } from "react-scroll";
 import CodeOutlinedIcon from "@mui/icons-material/CodeOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import MaterialUISwitch from "./MaterialUISwitch";
@@ -57,15 +57,22 @@ const Navigation: React.FC<NavigationProps> = ({ toggleDarkMode }) => {
 				) : (
 					<>
 						{routes.map((linkItem) => (
+							<Button key={linkItem.id} color="inherit">
+								<Link to={linkItem.path} smooth={true} duration={500}>
+									{linkItem.title}
+								</Link>
+							</Button>
+						))}
+						{/* {routes.map((linkItem) => (
 							<Button
 								component={Link}
 								to={linkItem.path}
 								color="inherit"
-								key={linkItem.id}
+								key={linkItem.id} 
 							>
 								{linkItem.title}
 							</Button>
-						))}
+						))} */}
 					</>
 				)}
 				<MaterialUISwitch defaultChecked onClick={toggleDarkMode} />

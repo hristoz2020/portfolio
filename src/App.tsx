@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Routes, Route } from "react-router-dom";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import "./App.css";
 import Navigation from "./components/Navigation";
@@ -25,12 +24,10 @@ function App() {
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
 			<Navigation toggleDarkMode={toggleDarkMode} />
-			<Routes>
-				<Route path="/" element={<Home />} />
-				<Route path="/about" element={<About />} />
-				<Route path="/projects" element={<Projects />} />
-				<Route path="/contacts" element={<Contacts />} />
-			</Routes>
+			<Home />
+			<About />
+			<Projects />
+			<Contacts />
 		</ThemeProvider>
 	);
 }

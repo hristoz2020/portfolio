@@ -12,6 +12,7 @@ const Projects: FC = () => {
 				flexDirection: "column",
 				pt: 12,
 			}}
+			id="/projects"
 		>
 			{projectsList.map((project) => (
 				<ProjectCard project={project} key={project.id} />

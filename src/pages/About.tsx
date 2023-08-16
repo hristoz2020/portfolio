@@ -5,7 +5,7 @@ import { skillsList } from "../constants/skillsList";
 
 const About: FC = () => {
 	return (
-		<Box sx={{ borderTop: 1, borderBottom: 1 }}>
+		<Box sx={{ borderTop: 1, borderBottom: 1, p: 12 }} id="/about">
 			<Typography align="center" variant="h5">
 				Skills:
 			</Typography>

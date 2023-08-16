@@ -19,7 +19,7 @@ const Home: FC = () => {
 					flexDirection: "row",
 				},
 			}}
-			id="home"
+			id="/"
 		>
 			<Box sx={{ p: 10}}>
 				<Typography
