@@ -38,7 +38,7 @@ const Home: FC = () => {
 					variant="h4"
 					fontFamily={"monospace"}
 				>
-					<WavingHandIcon color="inherit" />
+					<WavingHandIcon color="inherit" className="waving-hand" sx={{ height:"40px", width: "34px" , paddingRight: "5px"}} />
 					Hi, I am
 				</Typography>
 				<Typography

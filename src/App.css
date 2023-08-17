@@ -4,3 +4,27 @@
   font-family: monospace;
   font-size: larger;
 }
+
+.waving-hand {
+  display: inline-block;
+  animation: wave 6s infinite;
+  transform-origin: bottom;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  10%, 90% {
+    transform: translate(-2px, -2px) rotate(-5deg);
+  }
+
+  20%, 80% {
+    transform: translate(2px, 2px) rotate(5deg);
+  }
+
+  30%, 50%, 70% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
