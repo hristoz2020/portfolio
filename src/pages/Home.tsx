@@ -1,9 +1,15 @@
 import { Avatar, Box, Typography } from "@mui/material";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import WavingHandIcon from "@mui/icons-material/WavingHand";
 import img from "../assets/images/image.ico";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Home: FC = () => {
+	useEffect(() => {
+		Aos.init({ duration: 2000 });
+	});
+
 	return (
 		<Box
 			sx={{
@@ -21,18 +27,26 @@ const Home: FC = () => {
 			}}
 			id="/"
 		>
-			<Box sx={{ p: 10}}>
+			<Box sx={{ p: 10 }} data-aos="fade-down-right">
 				<Typography
 					sx={{
 						color: "inherit",
 						display: "flex",
 						justifyContent: "left",
-                        alignItems: "center"
+						alignItems: "center",
 					}}
 					variant="h4"
 				>
 					<WavingHandIcon color="inherit" />
-					Hi, I'm Hristoz!
+					Hi, I am
+				</Typography>
+				<Typography
+					sx={{
+						color: "inherit",
+					}}
+					variant="h4"
+				>
+					Hristoz Iliev
 				</Typography>
 
 				<Typography
@@ -57,6 +71,7 @@ const Home: FC = () => {
 					m: "",
 					borderRadius: "50%",
 				}}
+				data-aos="fade-down-left"
 			/>
 		</Box>
 	);
