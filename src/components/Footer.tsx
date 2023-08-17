@@ -9,7 +9,8 @@ const Footer = () => (
 		sx={{
 			display: "flex",
 			justifyContent: "space-around",
-			p: 3,
+			alignItems: "center",
+			p: 2,
 			borderTop: 1,
 		}}
 		component="footer"
