@@ -36,6 +36,7 @@ const Home: FC = () => {
 						alignItems: "center",
 					}}
 					variant="h4"
+					fontFamily={"monospace"}
 				>
 					<WavingHandIcon color="inherit" />
 					Hi, I am
@@ -45,6 +46,7 @@ const Home: FC = () => {
 						color: "inherit",
 					}}
 					variant="h4"
+					fontFamily={"monospace"}
 				>
 					Hristoz Iliev
 				</Typography>
@@ -57,6 +59,7 @@ const Home: FC = () => {
 						alignItems: "center",
 					}}
 					variant="h6"
+					fontFamily={"monospace"}
 				>
 					I'm interested in Front-End Development.
 				</Typography>

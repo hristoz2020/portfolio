@@ -19,7 +19,7 @@ const SkillCard = ({ name, image }: { name: string; image: string }) => {
 				image={image}
 				title={name}
 			/>
-			<Typography>{name}</Typography>
+			<Typography fontFamily={"monospace"}>{name}</Typography>
 		</Box>
 	);
 };

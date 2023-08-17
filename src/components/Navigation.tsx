@@ -41,8 +41,19 @@ const Navigation: React.FC<NavigationProps> = ({ toggleDarkMode }) => {
 	return (
 		<AppBar position="static" color="default">
 			<Toolbar>
-				<CodeOutlinedIcon />
-				<Typography variant="h6" sx={{ flexGrow: 1 }}>
+				<CodeOutlinedIcon
+					sx={{
+						width: "30px",
+						height: "40px",
+						paddingRight: "4px",
+						paddingTop: "2px",
+					}}
+				/>
+				<Typography
+					variant="h6"
+					sx={{ flexGrow: 1 }}
+					fontFamily={"monospace"}
+				>
 					Portfolio
 				</Typography>
 				{isMobile ? (

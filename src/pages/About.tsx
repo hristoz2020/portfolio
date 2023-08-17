@@ -6,7 +6,12 @@ import { skillsList } from "../constants/skillsList";
 const About: FC = () => {
 	return (
 		<Box sx={{ borderTop: 1, borderBottom: 1, p: 12 }} id="/about">
-			<Typography align="center" variant="h5">
+			<Typography
+				align="center"
+				variant="h5"
+				fontFamily={"monospace"}
+				sx={{ pb: 4 }}
+			>
 				Skills:
 			</Typography>
 			<Box

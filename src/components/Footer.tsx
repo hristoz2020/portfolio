@@ -10,7 +10,7 @@ const Footer = () => (
 			display: "flex",
 			justifyContent: "space-around",
 			alignItems: "center",
-			p: 2,
+			p: 1,
 			borderTop: 1,
 		}}
 		component="footer"
@@ -19,7 +19,12 @@ const Footer = () => (
 			maxWidth="sm"
 			sx={{ display: "flex", justifyContent: "start" }}
 		>
-			<Typography variant="body1" color="inherit" align="center">
+			<Typography
+				variant="body1"
+				color="inherit"
+				align="center"
+				fontFamily={"monospace"}
+			>
 				{"Copyright © "}
 				{new Date().getFullYear()}
 				{"."}

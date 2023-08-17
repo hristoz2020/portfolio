@@ -18,10 +18,19 @@ const ProjectCard = ({ project }: { project: Project }) => {
 				title={project.name}
 			/>
 			<CardContent>
-				<Typography gutterBottom variant="h5" component="div">
+				<Typography
+					gutterBottom
+					variant="h5"
+					component="div"
+					fontFamily={"monospace"}
+				>
 					{project.name}
 				</Typography>
-				<Typography variant="body2" color="text.secondary">
+				<Typography
+					variant="body2"
+					color="text.secondary"
+					fontFamily={"monospace"}
+				>
 					{project.description}
 				</Typography>
 			</CardContent>
@@ -32,10 +41,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
 					color="inherit"
 					to={project.code}
 				>
-					GitHub
-					<GitHubIcon
-						sx={{ paddingLeft: "4px", paddingBottom: "4px" }}
-					/>
+					<Typography fontFamily={"monospace"}>GitHub</Typography>
+					<GitHubIcon sx={{ paddingLeft: "4px" }} />
 				</Button>
 				{project.demo.length > 0 && (
 					<Button
@@ -44,10 +51,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
 						color="inherit"
 						to={project.demo}
 					>
-						Demo
-						<VisibilityIcon
-							sx={{ paddingLeft: "4px", paddingBottom: "4px" }}
-						/>
+						<Typography fontFamily={"monospace"}>Demo</Typography>
+						<VisibilityIcon sx={{ paddingLeft: "4px" }} />
 					</Button>
 				)}
 			</CardActions>
