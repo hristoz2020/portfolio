@@ -7,6 +7,7 @@ import Projects from "./pages/Projects";
 import Contacts from "./pages/Contacts";
 import About from "./pages/About";
 import Footer from "./components/Footer";
+import ButtonToScrollTop from "./components/ButtonToScrollToTop";
 
 function App() {
 	const [darkMode, setDarkMode] = useState(false);
@@ -25,6 +26,7 @@ function App() {
 		<ThemeProvider theme={theme}>
 			<CssBaseline />
 			<Navigation toggleDarkMode={toggleDarkMode} />
+			<ButtonToScrollTop />
 			<Home />
 			<About />
 			<Projects />
