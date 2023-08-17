@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
@@ -8,10 +9,19 @@ import { Project } from "../constants/projectsList";
 import { Link } from "react-router-dom";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const ProjectCard = ({ project }: { project: Project }) => {
+	useEffect(() => {
+		Aos.init({ duration: 2500 });
+	});
+
 	return (
-		<Card sx={{ maxWidth: 300, border: 1, m: 2 }}>
+		<Card
+			sx={{ maxWidth: 400, border: 1, m: 2 }}
+			data-aos={project.id % 2 === 0 ? "fade-right" : "fade-left"}
+		>
 			<CardMedia
 				sx={{ height: 200 }}
 				image={project.image}

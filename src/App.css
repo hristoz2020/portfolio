@@ -28,3 +28,16 @@
     transform: translate(0, 0) rotate(0deg);
   }
 }
+
+.drawer-link {
+  display: block;
+  width: 100%;
+  padding: 6px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}

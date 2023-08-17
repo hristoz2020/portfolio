@@ -91,6 +91,7 @@ const Navigation: React.FC<NavigationProps> = ({ toggleDarkMode }) => {
 								onClick={toggleDrawer}
 								smooth={true}
 								duration={500}
+								className="drawer-link"
 							>
 								<ListItemText primary={linkItem.title} />
 							</Link>
