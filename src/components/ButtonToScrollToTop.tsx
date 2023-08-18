@@ -43,14 +43,13 @@ const ButtonToScrollTop = () => {
 				bottom: "2rem",
 				right: "2rem",
 				display: isVisible ? "block" : "none",
+				zIndex: 1000,
 			}}
 		>
 			<Fab
 				color="default"
 				aria-label="scroll-to-top"
 				onClick={scrollToTop}
-				className="progress-border"
-				
 			>
 				<KeyboardArrowUpIcon />
 				<CircularProgress
@@ -58,11 +57,11 @@ const ButtonToScrollTop = () => {
 					value={scrollProgress}
 					size={56}
 					thickness={3}
-                    color="primary"
 					style={{
 						position: "fixed",
 						bottom: "2rem",
 						right: "2rem",
+                        color: "aqua"
 					}}
 				/>
 			</Fab>
