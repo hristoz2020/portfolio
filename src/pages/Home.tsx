@@ -1,4 +1,4 @@
-import { Avatar, Box, Typography } from "@mui/material";
+import { Avatar, Box, Button, Typography } from "@mui/material";
 import { FC, useEffect } from "react";
 import WavingHandIcon from "@mui/icons-material/WavingHand";
 import img from "../assets/images/image.ico";
@@ -38,7 +38,15 @@ const Home: FC = () => {
 					variant="h4"
 					fontFamily={"monospace"}
 				>
-					<WavingHandIcon color="inherit" className="waving-hand" sx={{ height:"40px", width: "34px" , paddingRight: "5px"}} />
+					<WavingHandIcon
+						color="inherit"
+						className="waving-hand"
+						sx={{
+							height: "40px",
+							width: "34px",
+							paddingRight: "5px",
+						}}
+					/>
 					Hi, I am
 				</Typography>
 				<Typography
@@ -57,12 +65,29 @@ const Home: FC = () => {
 						display: "flex",
 						justifyContent: "left",
 						alignItems: "center",
+						mt: 2,
 					}}
 					variant="h6"
 					fontFamily={"monospace"}
 				>
 					I'm interested in Front-End Development.
 				</Typography>
+				<Button
+					sx={{
+						border: 1,
+						borderRadius: 10,
+						px: "20%",
+						my: 3,
+						color: "inherit",
+						":hover": {
+							backgroundColor: "grey",
+						},
+					}}
+				>
+					<Typography variant="body1" fontFamily="monospace">
+						Download CV
+					</Typography>
+				</Button>
 			</Box>
 
 			<Avatar

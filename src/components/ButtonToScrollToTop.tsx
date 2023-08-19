@@ -40,8 +40,8 @@ const ButtonToScrollTop = () => {
 		<Box
 			style={{
 				position: "fixed",
-				bottom: "2rem",
-				right: "2rem",
+				bottom: "3rem",
+				right: "3rem",
 				display: isVisible ? "block" : "none",
 				zIndex: 1000,
 			}}
@@ -59,9 +59,8 @@ const ButtonToScrollTop = () => {
 					thickness={3}
 					style={{
 						position: "fixed",
-						bottom: "2rem",
-						right: "2rem",
-                        color: "aqua"
+						bottom: "3rem",
+						right: "3rem",
 					}}
 				/>
 			</Fab>
