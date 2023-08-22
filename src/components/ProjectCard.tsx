@@ -50,6 +50,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 					component={Link}
 					color="inherit"
 					to={project.code}
+					target="_blank"
 				>
 					<Typography fontFamily={"monospace"}>GitHub</Typography>
 					<GitHubIcon sx={{ paddingLeft: "4px" }} />
@@ -60,6 +61,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
 						component={Link}
 						color="inherit"
 						to={project.demo}
+						target="_blank"
 					>
 						<Typography fontFamily={"monospace"}>Demo</Typography>
 						<VisibilityIcon sx={{ paddingLeft: "4px" }} />
