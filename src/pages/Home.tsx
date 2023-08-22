@@ -15,7 +15,7 @@ const Home: FC = () => {
 			sx={{
 				nt: 8,
 				nb: 12,
-				py: "25%",
+				py: "20%",
 				display: "flex",
 				justifyContent: "center",
 				flexDirection: "column",
