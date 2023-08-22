@@ -15,8 +15,7 @@ const Home: FC = () => {
 			sx={{
 				nt: 8,
 				nb: 12,
-				pt: 18,
-				pb: 18,
+				py: "25%",
 				display: "flex",
 				justifyContent: "center",
 				flexDirection: "column",
@@ -27,7 +26,7 @@ const Home: FC = () => {
 			}}
 			id="/"
 		>
-			<Box sx={{ p: 10 }} data-aos="fade-down-right">
+			<Box sx={{ px: 10}} data-aos="fade-down-right">
 				<Typography
 					sx={{
 						color: "inherit",
