@@ -10,7 +10,8 @@ const Projects: FC = () => {
 				display: "flex",
 				alignItems: "center",
 				flexDirection: "column",
-				pt: 12,
+				py: 12,
+				borderBottom: 1,
 			}}
 			id="/projects"
 		>
