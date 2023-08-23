@@ -146,7 +146,7 @@ const Contacts = () => {
 					fontFamily={"monospace"}
 					gutterBottom
 				>
-					Contacts:
+					Contact me:
 				</Typography>
 				<form ref={form} onSubmit={handleSubmit}>
 					<Grid container spacing={2}>

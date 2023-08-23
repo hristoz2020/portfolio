@@ -11,7 +11,10 @@ const About: FC = () => {
 	});
 
 	return (
-		<Box sx={{ borderTop: 1, borderBottom: 1, p: 12 }} id="/about">
+		<Box
+			sx={{ borderTop: 1, borderBottom: 1, p: 12 }}
+			id="/about"
+		>
 			<Typography
 				align="center"
 				variant="h5"

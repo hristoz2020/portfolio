@@ -4,6 +4,7 @@ import WavingHandIcon from "@mui/icons-material/WavingHand";
 import img from "../assets/images/image.ico";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import pdf from "../assets/cv-file/HristozIlievResume.pdf";
 
 const Home: FC = () => {
 	useEffect(() => {
@@ -26,7 +27,7 @@ const Home: FC = () => {
 			}}
 			id="/"
 		>
-			<Box sx={{ px: 10}} data-aos="fade-down-right">
+			<Box sx={{ px: 10 }} data-aos="fade-down-right">
 				<Typography
 					sx={{
 						color: "inherit",
@@ -82,6 +83,8 @@ const Home: FC = () => {
 							backgroundColor: "grey",
 						},
 					}}
+					href={pdf}
+					target="_blank"
 				>
 					<Typography variant="body1" fontFamily="monospace">
 						Download CV
