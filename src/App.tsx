@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 import "./App.css";
 import Navigation from "./components/Navigation";
@@ -10,11 +10,23 @@ import Footer from "./components/Footer";
 import ButtonToScrollTop from "./components/ButtonToScrollToTop";
 
 function App() {
-	const [darkMode, setDarkMode] = useState(false);
+	const initialDarkMode = localStorage.getItem("darkMode") === "true";
+	const [darkMode, setDarkMode] = useState<boolean>(initialDarkMode);
 
 	const toggleDarkMode = () => {
-		setDarkMode((prevDarkMode) => !prevDarkMode);
+		const switchMode = !darkMode;
+		setDarkMode(switchMode);
+		localStorage.setItem(
+			"darkMode",
+			switchMode.toString() as "true" | "false"
+		);
 	};
+
+	useEffect(() => {
+		if (localStorage.getItem("darkMode") === null) {
+			localStorage.setItem("darkMode", "false");
+		}
+	}, []);
 
 	const theme = createTheme({
 		palette: {
