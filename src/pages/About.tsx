@@ -11,10 +11,7 @@ const About: FC = () => {
 	});
 
 	return (
-		<Box
-			sx={{ borderTop: 1, borderBottom: 1, p: 12 }}
-			id="/about"
-		>
+		<Box sx={{ borderTop: 1, borderBottom: 1, p: 12 }} id="/about">
 			<Typography
 				align="center"
 				variant="h5"
@@ -60,86 +57,7 @@ const About: FC = () => {
 					maxWidth: "580px",
 				}}
 			>
-				<Box
-					sx={{
-						display: "flex",
-						alignItems: "center",
-						border: 1,
-						borderRadius: 2,
-						boxShadow: 8,
-						my: 1,
-						p: 2,
-					}}
-					data-aos="zoom-in"
-				>
-					<Box>
-						<Typography variant="h6" fontFamily={"monospace"}>
-							Programming Education with JavaScript
-						</Typography>
-						<Typography variant="body2" fontFamily={"monospace"}>
-							<Link
-								href="https://www.tugab.bg/"
-								target="_blank"
-								rel="noopener noreferrer"
-								variant="body2"
-								fontFamily="monospace"
-								sx={{
-									textDecoration: "underline",
-									display: "block",
-									mt: 2,
-								}}
-							>
-								Software University SoftUni
-							</Link>
-						</Typography>
-					</Box>
-					<img
-						src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Logo_Software_University_%28SoftUni%29_-_blue.png/535px-Logo_Software_University_%28SoftUni%29_-_blue.png"
-						width="100px"
-					/>
-				</Box>
-				<Box
-					sx={{
-						display: "flex",
-						alignItems: "center",
-						border: 1,
-						borderRadius: 2,
-						boxShadow: 8,
-						my: 1,
-						p: 2,
-					}}
-					data-aos="zoom-in"
-				>
-					<Box>
-						<Typography variant="h6" fontFamily={"monospace"}>
-							Master's degree of Computer Systems and Technologies
-						</Typography>
-						<Typography
-							variant="body2"
-							fontFamily={"monospace"}
-							sx={{ textDecoration: "underline" }}
-						>
-							<Link
-								href="https://www.tugab.bg/"
-								target="_blank"
-								rel="noopener noreferrer"
-								variant="body2"
-								fontFamily="monospace"
-								sx={{
-									textDecoration: "underline",
-									display: "block",
-									mt: 2,
-								}}
-							>
-								Technical University of Gabrovo
-							</Link>
-						</Typography>
-					</Box>
-					<img
-						src="https://rectors.bg/images/members/TU-GABROVO.png"
-						width="110px"
-					/>
-				</Box>
+				
 			</Box>
 		</Box>
 	);
