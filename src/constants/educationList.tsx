@@ -1,4 +1,11 @@
-export const educationList = [
+export type EducationProps = {
+	id: number;
+	name: string[];
+	link: string;
+	image: string;
+};
+
+export const educationList: EducationProps[] = [
 	{
 		id: 0,
 		name: [

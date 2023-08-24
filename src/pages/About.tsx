@@ -1,9 +1,11 @@
 import { FC, useEffect } from "react";
-import { Box, Typography, Link } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import SkillCard from "../components/SkillCard";
 import { skillsList } from "../constants/skillsList";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { educationList } from "../constants/educationList";
+import EducationCard from "../components/EducationCard";
 
 const About: FC = () => {
 	useEffect(() => {
@@ -57,7 +59,9 @@ const About: FC = () => {
 					maxWidth: "580px",
 				}}
 			>
-				
+				{educationList.map((education) => (
+					<EducationCard education={education} key={education.id} />
+				))}
 			</Box>
 		</Box>
 	);
