@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 import {
-	TextField,
 	Button,
 	Grid,
 	Container,
@@ -9,10 +8,11 @@ import {
 	Alert,
 	IconButton,
 } from "@mui/material";
-import { Email, Person, Send, Close } from "@mui/icons-material";
+import { Send, Close } from "@mui/icons-material";
 import emailjs from "@emailjs/browser";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import FormInput from "../components/FormInput";
 
 const initialState = {
 	name: "",
@@ -71,7 +71,7 @@ const Contacts = () => {
 		} else {
 			setErrors(newErrors);
 		}
-	};
+	};	
 
 	return (
 		<>
@@ -150,69 +150,27 @@ const Contacts = () => {
 				</Typography>
 				<form ref={form} onSubmit={handleSubmit}>
 					<Grid container spacing={2}>
-						<Grid item xs={12}>
-							<TextField
-								label="Name"
-								variant="outlined"
-								fullWidth
-								value={formData.name}
-								name="name"
-								onChange={(e) =>
-									setFormData({
-										...formData,
-										name: e.target.value,
-									})
-								}
-								error={Boolean(errors.name)}
-								helperText={errors.name}
-								InputProps={{
-									startAdornment: (
-										<Person sx={{ width: "30px", pr: 1 }} />
-									),
-								}}
-							/>
-						</Grid>
-						<Grid item xs={12}>
-							<TextField
-								label="Email"
-								variant="outlined"
-								fullWidth
-								value={formData.email}
-								name="email"
-								onChange={(e) =>
-									setFormData({
-										...formData,
-										email: e.target.value,
-									})
-								}
-								error={Boolean(errors.email)}
-								helperText={errors.email}
-								InputProps={{
-									startAdornment: (
-										<Email sx={{ width: "30px", pr: 1 }} />
-									),
-								}}
-							/>
-						</Grid>
-						<Grid item xs={12}>
-							<TextField
-								label="Message"
-								variant="outlined"
-								multiline
-								rows={4}
-								fullWidth
-								value={formData.message}
-								name="message"
-								onChange={(e) =>
-									setFormData({
-										...formData,
-										message: e.target.value,
-									})
-								}
-								error={Boolean(errors.message)}
-								helperText={errors.message}
-							/>
-						</Grid>
+						<FormInput
+							name="name"
+							formData={formData}
+							errors={errors}
+							setFormData={setFormData}
+							isMessageField={false}
+						/>
+						<FormInput
+							name="email"
+							formData={formData}
+							errors={errors}
+							setFormData={setFormData}
+							isMessageField={false}
+						/>
+						<FormInput
+							name="message"
+							formData={formData}
+							errors={errors}
+							setFormData={setFormData}
+							isMessageField={true}
+						/>
 					</Grid>
 					<Button
 						type="submit"
