@@ -38,16 +38,16 @@ const FormInput = ({
 				fullWidth
 				multiline={isMessageField}
 				rows={isMessageField ? 4 : 0}
-				value={formData.name}
+				value={formData[name]}
 				name={name}
 				onChange={(e) =>
 					setFormData({
 						...formData,
-						name: e.target.value,
+						[name]: e.target.value,
 					})
 				}
-				error={Boolean(errors.name)}
-				helperText={errors.name}
+				error={Boolean(errors[name])}
+				helperText={errors[name]}
 				InputProps={{
 					startAdornment: checkIcon(name),
 				}}
