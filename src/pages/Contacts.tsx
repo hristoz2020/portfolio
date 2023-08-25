@@ -1,18 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import {
-	Button,
-	Grid,
-	Container,
-	Typography,
-	Stack,
-	Alert,
-	IconButton,
-} from "@mui/material";
-import { Send, Close } from "@mui/icons-material";
+import { Button, Grid, Container, Typography } from "@mui/material";
+import { Send } from "@mui/icons-material";
 import emailjs from "@emailjs/browser";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import FormInput from "../components/FormInput";
+import OnTopMessage from "../components/OnTopMessage";
 
 const initialState = {
 	name: "",
@@ -23,9 +16,9 @@ const initialState = {
 const Contacts = () => {
 	const [formData, setFormData] = useState(initialState);
 	const [errors, setErrors] = useState<any>(initialState);
+	const [isShowMessage, setIsShowMessage] = useState<boolean>(false);
 	const [isSuccessfullReceived, setIsSuccessfullReceived] =
 		useState<boolean>(false);
-	const [isFailedReceive, setIsFailedReceive] = useState<boolean>(false);
 	const form = useRef<any>();
 
 	useEffect(() => {
@@ -59,11 +52,13 @@ const Contacts = () => {
 				.then(
 					(result) => {
 						console.log(result.text);
+						setIsShowMessage(true);
 						setIsSuccessfullReceived(true);
 					},
 					(error) => {
 						console.log(error.text);
-						setIsFailedReceive(true);
+						setIsShowMessage(true);
+						setIsSuccessfullReceived(false);
 					}
 				);
 			setFormData(initialState);
@@ -71,64 +66,15 @@ const Contacts = () => {
 		} else {
 			setErrors(newErrors);
 		}
-	};	
+	};
 
 	return (
 		<>
-			{isSuccessfullReceived && (
-				<Stack
-					sx={{ width: "100%", position: "fixed", top: 0, left: 0 }}
-					spacing={2}
-					data-aos="flip-up"
-				>
-					<Alert
-						severity="success"
-						sx={{ backgroundColor: "darkgray", boxShadow: 10 }}
-						action={
-							<IconButton
-								aria-label="close"
-								size="small"
-								onClick={() => {
-									setIsSuccessfullReceived(false);
-								}}
-							>
-								<Close fontSize="medium" color="inherit" />
-							</IconButton>
-						}
-					>
-						Your message has been successfully received!
-					</Alert>
-				</Stack>
-			)}
-			{isFailedReceive && (
-				<Stack
-					sx={{
-						width: "100%",
-						position: "fixed",
-						top: 0,
-						left: 0,
-					}}
-					spacing={2}
-					data-aos="flip-up"
-				>
-					<Alert
-						severity="error"
-						sx={{ backgroundColor: "darkgray", boxShadow: 10 }}
-						action={
-							<IconButton
-								aria-label="close"
-								size="small"
-								onClick={() => {
-									setIsFailedReceive(false);
-								}}
-							>
-								<Close fontSize="medium" color="inherit" />
-							</IconButton>
-						}
-					>
-						Oops something went wrong. Try again later!
-					</Alert>
-				</Stack>
+			{isShowMessage && (
+				<OnTopMessage
+					setIsShowMessage={setIsShowMessage}
+					isSuccessfullReceived={isSuccessfullReceived}
+				/>
 			)}
 			<Container
 				sx={{
