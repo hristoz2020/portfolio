@@ -1,13 +1,13 @@
-import { FC, useEffect } from "react";
+import { useEffect } from "react";
 import { Box, Typography } from "@mui/material";
 import SkillCard from "../components/SkillCard";
 import { skillsList } from "../constants/skillsList";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { educationList } from "../constants/educationList";
 import EducationCard from "../components/EducationCard";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
-const About: FC = () => {
+const About = () => {
 	useEffect(() => {
 		Aos.init({ duration: 2500 });
 	});

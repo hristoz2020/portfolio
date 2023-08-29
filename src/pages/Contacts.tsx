@@ -2,10 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import { Button, Grid, Container, Typography } from "@mui/material";
 import { Send } from "@mui/icons-material";
 import emailjs from "@emailjs/browser";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import FormInput from "../components/FormInput";
 import OnTopMessage from "../components/OnTopMessage";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const initialState = {
 	name: "",

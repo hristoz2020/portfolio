@@ -1,12 +1,12 @@
+import { useEffect } from "react";
 import { Avatar, Box, Button, Typography } from "@mui/material";
-import { FC, useEffect } from "react";
 import WavingHandIcon from "@mui/icons-material/WavingHand";
 import img from "../assets/images/image.ico";
+import pdf from "../assets/cv-file/HristozIlievResume.pdf";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import pdf from "../assets/cv-file/HristozIlievResume.pdf";
 
-const Home: FC = () => {
+const Home = () => {
 	useEffect(() => {
 		Aos.init({ duration: 2000 });
 	});

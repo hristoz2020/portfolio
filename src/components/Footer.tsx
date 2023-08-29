@@ -1,6 +1,4 @@
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import { Box, Link } from "@mui/material";
+import { Box, Container, Link, Typography } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
