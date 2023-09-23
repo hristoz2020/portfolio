@@ -87,7 +87,7 @@ const Home = () => {
 					target="_blank"
 				>
 					<Typography variant="body1" fontFamily="monospace">
-						Rewiev CV
+						Preview CV
 					</Typography>
 				</Button>
 			</Box>
